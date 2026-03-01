@@ -1,0 +1,65 @@
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: auth_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - auth_network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: auth_backend
+    environment:
+      PORT: 8081
+      MONGODB_URI: mongodb://admin:password123@mongo:27017/auth_db?authSource=admin
+      JWT_SECRET: your_jwt_secret_key_change_in_production_12345
+      JWT_EXPIRE: 7d
+      NODE_ENV: development
+      CLIENT_URL: http://localhost:8082
+    ports:
+      - "8081:8081"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - auth_network
+    command: npm run dev
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: auth_frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:8081/api
+    ports:
+      - "8082:8082"
+    depends_on:
+      - backend
+    networks:
+      - auth_network
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongodb_data:
+
+networks:
+  auth_network:
+    driver: bridge

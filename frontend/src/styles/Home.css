@@ -1,0 +1,121 @@
+/* Home Page Styles */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.home-header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.home-header h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.home-header p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.features {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+.feature-card p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.get-started {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.get-started h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+}
