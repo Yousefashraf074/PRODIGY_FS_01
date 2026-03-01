@@ -15,7 +15,8 @@ This folder contains screenshots showcasing the authentication system's features
 - **Description**: User dashboard showing welcome message, overview/profile tabs, user avatar, and profile information with edit capabilities
 
 ### Registration Page
-- **File**: `03-registration-form.png` 
+- **File**: <img width="1916" height="1028" alt="Screenshot 2026-03-01 042031" src="https://github.com/user-attachments/assets/19783fe1-e3aa-4ac9-a2d3-f271d3e5ae87" />
+
 - **Description**: Enhanced registration form with:
   - Side-by-side name fields
   - Email validation
@@ -24,7 +25,8 @@ This folder contains screenshots showcasing the authentication system's features
   - Real-time validation feedback
 
 ### Form Validation
-- **File**: `04-registration-validation.png`
+- **File**: <img width="585" height="873" alt="Screenshot 2026-03-01 042048" src="https://github.com/user-attachments/assets/33319b5b-97af-469b-86e7-dc7565780f8c" />
+
 - **Description**: Registration form demonstrating validation features:
   - "User already exists with this email" error message
   - "Passwords do not match" warning
