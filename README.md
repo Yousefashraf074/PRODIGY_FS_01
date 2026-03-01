@@ -37,7 +37,18 @@ A complete, production-ready full-stack authentication system with secure login,
 - ✅ **React**: Modern frontend framework
 - ✅ **API Architecture**: RESTful API design
 
-## 📁 Project Structure
+## � Screenshots
+
+See the application in action! Check out our [visual documentation](docs/screenshots/) showcasing:
+
+- **Home Page**: Feature overview and landing page design
+- **Dashboard**: User profile management and navigation  
+- **Registration**: Enhanced form with password strength indicator and validation
+- **Authentication Flow**: Login/signup process with real-time feedback
+
+> 💡 **Note**: Screenshots demonstrate the modern UI with password strength indicators, toast notifications, user avatars, and responsive design.
+
+## �📁 Project Structure
 
 ```
 PRODIGY_FS_01/
