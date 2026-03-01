@@ -5,11 +5,13 @@ This folder contains screenshots showcasing the authentication system's features
 ## Application Screenshots
 
 ### Home Page
-- **File**: `01-home-page.png`
+- **File**: <img width="1919" height="1025" alt="Screenshot 2026-03-01 041956" src="https://github.com/user-attachments/assets/ccf8930a-ef6a-4a3b-8ebd-63a7807a4861" />
+
 - **Description**: Landing page showcasing key features like secure login, JWT authentication, role-based access control, protected routes, Docker containerization, and user management
 
 ### Dashboard 
-- **File**: `02-dashboard-overview.png`
+- **File**: <img width="1917" height="1033" alt="Screenshot 2026-03-01 042111" src="https://github.com/user-attachments/assets/284a8e72-69ca-4ab5-8910-d969769a88b3" />
+
 - **Description**: User dashboard showing welcome message, overview/profile tabs, user avatar, and profile information with edit capabilities
 
 ### Registration Page
